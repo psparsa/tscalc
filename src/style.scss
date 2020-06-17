@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    font-family: 'FreeSans';
+}
+
+html,
+body,
+#Container {
+    width: 100%;
+    height: 100%;
+}
+
+#Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(135, 129, 219, 1) 0%, rgba(98, 196, 241, 1) 100%);
+
+    #Frame {
+        width: 380px;
+        height: 666px;
+        background-color: #f2f2f2;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+
+        #Display {
+            width: 100%;
+            height: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+
+            #Previous,
+            #Current {
+                width: 90%;
+                display: flex;
+                justify-content: flex-end;
+                overflow: hidden;
+            }
+
+            #Previous {
+                height: 30%;
+                font-size: 2em;
+                color: rgb(93, 171, 204);
+            }
+
+            #Current {
+                font-size: 4em;
+                height: 50%;
+                color: rgb(51, 153, 197);
+            }
+        }
+
+        #Keyboard {
+            width: 100%;
+            height: 70%;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+
+            .Key {
+                width: 70%;
+                height: 70%;
+                background-color: #f7f7f7;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2em;
+                color: rgb(93, 171, 204);
+                box-shadow: -1px 2px 6px rgb(194, 194, 194);
+                transition: ease-in-out 0.1s;
+                cursor: pointer;
+
+                &:hover {
+                    scale: 1.05;
+                }
+
+                &:nth-of-type(4),
+                &:nth-of-type(8),
+                &:nth-of-type(12),
+                &:nth-of-type(16),
+                &:nth-of-type(19) {
+                    color: #f7f7f7 !important;
+                    background-color: #61c6f2 !important;
+                    box-shadow: -1px 2px 6px #61c6f2 !important;
+                }
+
+                &:nth-of-type(19) {
+                    width: 90%;
+                    border-radius: 50px;
+                    grid-column: 3 / 2 span;
+                    grid-row: 5;
+                }
+            }
+        }
+    }
+}
