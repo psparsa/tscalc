@@ -23,7 +23,7 @@ function handlerKey(EnterVal) {
     }
 }
 function handlerOperator(EnterVal) {
-    if (wevalue.length < 9 && wevalue.length >= 1 && !wevalue.match('.+[\%\/\*\\-\+]$')) {
+    if (wevalue.length < 8 && wevalue.length >= 1 && !wevalue.match('.+[\%\/\*\\-\+]$')) {
         set(EnterVal, 'add');
     }
 }
